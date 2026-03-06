@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 280px;
+      font-family: system-ui, sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      padding: 16px;
+    }
+
+    h1 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+    }
+
+    h1 svg {
+      flex-shrink: 0;
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 13px;
+      background: #0d0d1a;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #e0e0e0;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    input:focus {
+      border-color: #fc6d26;
+    }
+
+    button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 9px;
+      font-size: 13px;
+      font-weight: 600;
+      background: #fc6d26;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    button:hover {
+      background: #e24329;
+    }
+
+    #status {
+      margin-top: 8px;
+      font-size: 12px;
+      text-align: center;
+      min-height: 16px;
+      color: #6dbf67;
+    }
+
+    #status.error {
+      color: #e05252;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <svg width="20" height="20" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M189.85 351.93L264.19 117.92H115.51L189.85 351.93Z" fill="#fc6d26"/>
+      <path d="M189.85 351.93L115.51 117.92H28.34L189.85 351.93Z" fill="#fca326"/>
+      <path d="M28.34 117.92L6.33 185.12C4.36 191.3 6.57 198.05 11.82 201.88L189.85 351.93L28.34 117.92Z" fill="#e24329"/>
+      <path d="M28.34 117.92H115.51L79.03 4.97C76.8 -1.66 67.63 -1.66 65.4 4.97L28.34 117.92Z" fill="#fc6d26"/>
+      <path d="M189.85 351.93L264.19 117.92H351.36L189.85 351.93Z" fill="#fca326"/>
+      <path d="M351.36 117.92L373.37 185.12C375.34 191.3 373.13 198.05 367.88 201.88L189.85 351.93L351.36 117.92Z" fill="#e24329"/>
+      <path d="M351.36 117.92H264.19L300.67 4.97C302.9 -1.66 312.07 -1.66 314.3 4.97L351.36 117.92Z" fill="#fc6d26"/>
+    </svg>
+    GitLab Search
+  </h1>
+
+  <label for="gitlabUrl">GitLab URL</label>
+  <input type="url" id="gitlabUrl" placeholder="https://gitlab.example.com" />
+  <button id="save">Save</button>
+  <p id="status"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

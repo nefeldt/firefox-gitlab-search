@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "GitLab Search",
+  "description": "Search selected text in your self-hosted GitLab via the context menu.",
+  "version": "1.0.0",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gitlab-search@local",
+      "strict_min_version": "57.0"
+    }
+  }
+}
